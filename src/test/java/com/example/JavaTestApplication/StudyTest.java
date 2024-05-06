@@ -1,26 +1,32 @@
 package com.example.JavaTestApplication;
 
+import com.example.JavaTestApplication.tag.FastTag;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
-import java.time.Duration;
-
+@Slf4j
 class StudyTest {
 
+    @RegisterExtension
+    static FindSlowTestExtension findSlowTestExtension = new FindSlowTestExtension(1000L);
+
     @Test
-    @Tag("fast")
     @DisplayName("Java 객체 생성 테스트")
     void create() {
         Study study = new Study();
         Assertions.assertNotNull(study);
-        System.out.println("create");
+        log.info("create");
     }
 
     @Test
     void create2() {
         Study study = new Study();
         Assertions.assertNotNull(study);
-        System.out.println("create2");
+        log.info("create2");
     }
 
 //    @Test
@@ -87,26 +93,48 @@ class StudyTest {
     @Tag("First")
     void tagFirstTest() {
         Assertions.assertTrue(true);
-        System.out.println("tagFirstTest");
+        log.info("tagFirstTest");
+    }
+
+    @FastTag
+    void fastTagTest() {
+        log.info("Fast Tag Test");
+    }
+
+    @RepeatedTest(5)
+    void repeatTest() {
+        log.info("repeated Test");
+    }
+
+    @DisplayName("반복 테스트")
+    @RepeatedTest(value = 5, name = "{displayName}, {currentRepetition}/{totalRepetitions}")
+    void repeatTest2(RepetitionInfo repetitionInfo) {
+        log.info("repeated Test {}/{}", repetitionInfo.getCurrentRepetition(), repetitionInfo.getTotalRepetitions());
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"날씨가", "많이", "추워지고", "있어요"})
+    void parameterizedTest(String message) {
+        log.info(message);
     }
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("before All");
+        log.info("before All");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("after All");
+        log.info("after All");
     }
 
     @BeforeEach
     void beforeEach() {
-        System.out.println("before each");
+        log.info("before each");
     }
 
     @AfterEach
     void afterEach() {
-        System.out.println("after each");
+        log.info("after each");
     }
 }
