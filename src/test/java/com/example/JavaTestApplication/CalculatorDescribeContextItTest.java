@@ -11,12 +11,13 @@ class CalculatorDescribeContextItTest {
     @Nested
     @DisplayName("Discribe : plus 메소드는")
     class Describe_plus {
-        private final Integer a = 1;
-        private final Integer b = 2;
 
         @Nested
         @DisplayName("Context : Integer인 두 값이 주어진다면")
         class Context_two_integer {
+
+            private final Integer a = 1;
+            private final Integer b = 2;
             @Test
             @DisplayName("It : 두 값의 합을 Integer로 반환한다.")
             void it_return_integer() {
@@ -30,12 +31,13 @@ class CalculatorDescribeContextItTest {
     @Nested
     @DisplayName("Discribe : minus 메소드는")
     class Discribe_minus {
-        private final Integer a = 1;
-        private final Integer b = 2;
 
         @Nested
         @DisplayName("Context : Integer인 두 값이 주어진다면")
         class Context_two_integer {
+
+            private final Integer a = 1;
+            private final Integer b = 2;
             @Test
             @DisplayName("It : 두 값의 뺄셈을 Integer로 반환한다.")
             void it_return_integer() {

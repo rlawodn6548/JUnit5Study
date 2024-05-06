@@ -8,6 +8,7 @@ import java.time.Duration;
 class StudyTest {
 
     @Test
+    @Tag("fast")
     @DisplayName("Java 객체 생성 테스트")
     void create() {
         Study study = new Study();
