@@ -1,9 +1,8 @@
-package com.example.JavaTestApplication.property;
+package com.example.JavaTestApplication.contextconfiguration;
 
 import com.example.JavaTestApplication.object.TestObject1;
 import com.example.JavaTestApplication.object.TestObject2;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.core.ApplicationContext;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

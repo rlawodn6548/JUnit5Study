@@ -1,4 +1,4 @@
-package com.example.JavaTestApplication.property;
+package com.example.JavaTestApplication.contextconfiguration;
 
 import com.example.JavaTestApplication.object.TestObject2;
 import org.springframework.context.annotation.Bean;
