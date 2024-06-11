@@ -10,9 +10,8 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@TestPropertySource("/applicationConfig.properties")
-public class PropertySourceTest {
-    // TestPropertySource는 yml 파일을 인식하지 못한다.
+@TestPropertySource(properties={"test.value=application_test file value"})
+public class PropertySourceInlineTest {
     @Autowired
     private ApplicationContext applicationContext;
 
