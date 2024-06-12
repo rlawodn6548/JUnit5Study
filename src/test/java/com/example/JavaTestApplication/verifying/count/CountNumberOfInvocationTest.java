@@ -47,14 +47,4 @@ public class CountNumberOfInvocationTest {
         Mockito.verify(mockedList, Mockito.atLeast(2)).add("three times");
 
     }
-
-    @Test
-    void neverCallVerifyTest() {
-        // given
-        ArrayList mockedList = Mockito.mock(ArrayList.class);
-
-        // when
-
-        // then
-    }
 }
