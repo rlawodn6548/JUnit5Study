@@ -1,4 +1,4 @@
-package com.example.JavaTestApplication.verifying.order;
+package com.example.JavaTestApplication.mockito.verifying.order;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;

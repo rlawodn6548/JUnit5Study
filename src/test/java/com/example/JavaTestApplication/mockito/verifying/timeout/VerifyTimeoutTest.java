@@ -1,4 +1,4 @@
-package com.example.JavaTestApplication.verifying.timeout;
+package com.example.JavaTestApplication.mockito.verifying.timeout;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

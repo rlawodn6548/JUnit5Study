@@ -1,4 +1,4 @@
-package com.example.JavaTestApplication.verifying.count;
+package com.example.JavaTestApplication.mockito.verifying.count;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

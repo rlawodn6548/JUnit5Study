@@ -1,4 +1,4 @@
-package com.example.JavaTestApplication;
+package com.example.JavaTestApplication.junit;
 
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;

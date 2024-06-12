@@ -1,6 +1,8 @@
-package com.example.JavaTestApplication;
+package com.example.JavaTestApplication.junit;
 
-import com.example.JavaTestApplication.tag.FastTag;
+import com.example.JavaTestApplication.Study;
+import com.example.JavaTestApplication.junit.FindSlowTestExtension;
+import com.example.JavaTestApplication.junit.tag.FastTag;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
